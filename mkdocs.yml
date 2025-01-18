@@ -19,7 +19,7 @@ nav:
           - usage/from-source/uv-just.md
       - 'Nâng cao':
           - usage/advanced/schedule-run.md
-  - 'Config schema': 'https://ntgnguyen.github.io/check-phat-nguoi/schemas/config.html'
+  - 'Config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
   - 'Development':
       - dev/setup.md
       - 'API':

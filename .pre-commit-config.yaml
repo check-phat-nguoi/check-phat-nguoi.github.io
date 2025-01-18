@@ -43,7 +43,7 @@ repos:
         stages:
           - manual
         files: '^docs\/sample-config\/.*(?!cloudflare).*config\.json$'
-        args: ['--schemafile', 'schemas/config.json']
+        args: ['--schemafile', 'schemas/cli.config.json']
 
   - repo: https://github.com/astral-sh/uv-pre-commit
     rev: 0.5.14
