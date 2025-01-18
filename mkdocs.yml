@@ -3,7 +3,7 @@
 site_name: 'Check Phạt Nguội'
 site_author: 'NTGNguyen & Kevin Nitro'
 site_description: 'Tool kiểm tra phạt nguội'
-site_url: 'https://check-phat-nguoi.github.io/'
+site_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 repo_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 strict: true
 
@@ -11,14 +11,14 @@ nav:
   - 'Trang chủ': index.md
   - 'Sử dụng':
       - usage/index.md
-      - usage/setup-config.md
-      - 'From source':
-          - usage/from-source/index.md
-          - usage/from-source/pip.md
-          - usage/from-source/uv.md
-          - usage/from-source/uv-just.md
-      - 'Nâng cao':
-          - usage/advanced/schedule-run.md
+      - 'CLI':
+          - usage/cli/install.md
+          - usage/cli/config.md
+      - 'Lịch trình':
+          - usage/schedule/github-action.md
+          - usage/schedule/cloudflare-workers.md
+      - '24/7 bot':
+          - usage/247-bot/telegram-railway.md
   - 'Config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
   - 'Development':
       - dev/setup.md
@@ -97,15 +97,11 @@ plugins:
         - stemmer
         - stopWordFilter
         - trimmer
-  - exclude:
-      glob:
-        - 'dev/requests/**'
-        - 'sample-config/**'
 
 validation:
   nav:
     not_found: warn
-    omitted_files: warn
+    omitted_files: info
   unrecognized_links: warn
 
 extra:

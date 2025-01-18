@@ -1,12 +1,15 @@
-# Thiết lập chạy tự động
+# Github Action
 
-## Github Action
-
-- Fork repo này
+- Fork repo <https://github.com/check-phat-nguoi/cpn-gha>
 - Bỏ comment 2 dòng sau và commit
 
 ```yaml title=".github/workflows/schedule-run.yml" hl_lines="4 5"
---8<-- ".github/workflows/schedule-run.yml:1:7"
+name: Schedule Run
+
+on:
+  # schedule:
+  #   - cron: 0 0 * * 0
+  workflow_dispatch:
 ```
 
 ??? note "Tùy chỉnh thời gian schedule"
@@ -19,15 +22,3 @@
 !!! note
 
     Có thể kích hoạt thủ công workflow `schedule-run`
-
----
-
-## Windows
-
-- Task Scheduler
-
----
-
-## Linux
-
-<https://www.digitalocean.com/community/tutorials/how-to-use-cron-to-automate-tasks-ubuntu-1804>

@@ -1,7 +1,7 @@
-# api.zm.io.vn
+# zm.io.vn
 
 ```http
---8<-- "dev/requests/zm_io_vn.http"
+--8<-- "requests/zm_io_vn.http"
 ```
 
 ??? info

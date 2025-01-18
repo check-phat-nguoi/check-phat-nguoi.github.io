@@ -9,7 +9,7 @@ Thiết lập file `config.json` tại nơi đang đứng _(Nơi gọi chạy ch
 
 !!! info
 
-    Xem [Config Schema](https://ntgnguyen.github.io/check-phat-nguoi/schemas/config.html) để biết chi tiết config
+    Xem [Config Schema](https://ntgnguyen.github.io/check-phat-nguoi/schemas/cli.config.html) để biết chi tiết config
 
 ???+ example "Config mẫu"
 
