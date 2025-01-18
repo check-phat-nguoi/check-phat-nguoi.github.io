@@ -1,4 +1,6 @@
 {
   "typeCheckingMode": "standard",
-  "include": ["src/**", "../cli/src/**", "../cli/core/**"]
+  "include": ["src/**", "../cli/src/**", "../cli/core/**"],
+  "venvPath": "../../",
+  "venv": ".venv"
 }
