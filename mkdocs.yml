@@ -3,8 +3,8 @@
 site_name: 'Check Phạt Nguội'
 site_author: 'NTGNguyen & Kevin Nitro'
 site_description: 'Tool kiểm tra phạt nguội'
-site_url: 'https://ntgnguyen.github.io/check-phat-nguoi'
-repo_url: 'https://github.com/ntgnguyen/check-phat-nguoi'
+site_url: 'https://check-phat-nguoi.github.io/'
+repo_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 strict: true
 
 nav:
