@@ -16,14 +16,14 @@ web-dev: restore-dev-env
   uv run --frozen mkdocs serve
 
 gen-schemas: restore-dev-env
-  uv run --frozen cpn-generate-schemas
+  uv run --frozen generate-schemas
 
 build-web: restore-dev-env
   rm ./site/ -rf || true
   uv run --frozen mkdocs build
   rm ./site/schemas/ -rf || true
   mkdir ./site/schemas/ -p
-  uv run --frozen cpn-generate-schemas
+  uv run --frozen generate-schemas
   cp ./schemas/* ./site/schemas
   uv run --frozen generate-schema-doc --config-file jsfh-conf.yaml ./site/schemas/ ./site/schemas/
 
