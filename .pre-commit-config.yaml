@@ -42,5 +42,5 @@ repos:
       - id: check-jsonschema
         stages:
           - manual
-        files: '^docs\/sample-config\/.*(?!cloudflare).*config\.json$'
+        files: '^sample-config\/.*(?!cloudflare).*config\.json$'
         args: ['--schemafile', 'schemas/cli.config.json']
