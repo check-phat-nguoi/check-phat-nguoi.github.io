@@ -32,7 +32,6 @@ jobs:
           cache-dependency-glob: 'uv.lock'
 
       - uses: actions/setup-python@v5
-        id: setup-python
         with:
           python-version-file: '.python-version'
           cache: 'pip'
@@ -43,19 +42,12 @@ jobs:
       - name: Install deps
         run: just restore-env
 
-      - name: Install cpn cli
-        run: 'uv add git+https://github.com/${{ github.repository_owner }}/cpn-cli'
-
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
 
       - name: Build website
         run: just build-web
-
-      - name: Uninstall cpn cli
-        if: ${{ steps.setup-python.outputs.cache-hit == 'false' }}
-        run: uv remove cpn-cli
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
