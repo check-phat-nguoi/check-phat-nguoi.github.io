@@ -16,11 +16,11 @@ Thiết lập file `config.json` tại nơi đang đứng _(Nơi gọi chạy ch
     === "Cơ bản"
 
         ```json title="config.json"
-        --8<-- "sample-config/simple.config.json"
+        --8<-- "sample-configs/simple.config.json"
         ```
 
     === "Nâng cao"
 
         ```json title="config.json"
-        --8<-- "sample-config/advanced.config.json"
+        --8<-- "sample-configs/advanced.config.json"
         ```
