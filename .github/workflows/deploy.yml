@@ -44,7 +44,7 @@ jobs:
         run: just restore-env
 
       - name: Install cpn cli
-        run: uv add git+${{ github.repository_owner }}/cpn-cli
+        run: 'uv add git+https://github.com/${{ github.repository_owner }}/cpn-cli'
 
       - name: Setup Pages
         id: pages
