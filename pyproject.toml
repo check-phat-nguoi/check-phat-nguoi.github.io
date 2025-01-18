@@ -1,6 +1,6 @@
 [project]
 name = "cpn-docs"
-version = "0.1.0.dev.1"
+version = "0.0.0"
 description = "Doc website for check-phat-nguoi"
 readme = "README.md"
 requires-python = ">=3.13"
@@ -15,9 +15,6 @@ generate-schemas = "cpn_generate_schemas:__main__.main"
 
 [tool.hatch.build.targets.wheel]
 packages = ["src/cpn_generate_schemas"]
-
-[tool.uv.sources]
-cpn-cli = { workspace = true }
 
 [build-system]
 requires = ["hatchling"]
