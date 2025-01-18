@@ -1,34 +1,34 @@
 default: web-dev
 
 alias wb := build-web
-alias p := precommit-run-all
-alias re := restore-env
-alias rde := restore-dev-env
-
-restore-dev-env:
-  [ -d '.venv' ] || (uv sync --all-groups --frozen && uv run pre-commit install)
+alias r := restore-env
 
 restore-env:
-  [ -d '.venv' ] || uv sync --no-dev --frozen
+  [ -d '.venv' ] || uv sync --all-extras --frozen
 
-web-dev: restore-dev-env
+bump-version: restore-env
+  uv run cz bump --no-verify
+  uv run pre-commit run -a
+  git commit --amend --no-edit
+  
+gen-schemas: restore-env
+  uv run generate-schemas
+  
+web-dev: restore-env
   rm ./site/ -rf || true
-  uv run --frozen mkdocs serve
+  uv run mkdocs serve
 
-gen-schemas: restore-dev-env
-  uv run --frozen generate-schemas
-
-build-web: restore-dev-env
+build-web: restore-env
   rm ./site/ -rf || true
-  uv run --frozen mkdocs build
+  uv run mkdocs build
   rm ./site/schemas/ -rf || true
   mkdir ./site/schemas/ -p
-  uv run --frozen generate-schemas
+  uv run generate-schemas
   cp ./schemas/* ./site/schemas
-  uv run --frozen generate-schema-doc --config-file jsfh-conf.yaml ./site/schemas/ ./site/schemas/
+  uv run generate-schema-doc --config-file jsfh-conf.yaml ./site/schemas/ ./site/schemas/
 
-clean:
+clean: restore-env
   uvx cleanpy@0.5.1 .
 
-precommit-run-all: restore-dev-env
-  uv run --frozen --only-dev pre-commit run -a
+precommit-run-all: restore-env
+  uv run pre-commit run -a
