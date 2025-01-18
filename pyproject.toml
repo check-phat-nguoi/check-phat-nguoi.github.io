@@ -11,7 +11,7 @@ dependencies = [
 ]
 
 [project.scripts]
-generate-schemas = "generate-schemas:__main__.main"
+generate-schemas = "generate_schemas:__main__.main"
 
 [dependency-groups]
 dev = ["pre-commit>=4.0.1"]
