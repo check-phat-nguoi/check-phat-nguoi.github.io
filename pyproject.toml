@@ -14,9 +14,6 @@ dependencies = [
 [project.scripts]
 generate-schemas = "cpn_generate_schemas:__main__.main"
 
-[dependency-groups]
-dev = ["pre-commit>=4.0.1"]
-
 [tool.hatch.build.targets.wheel]
 packages = ["src/cpn_generate_schemas"]
 
