@@ -274,20 +274,28 @@ wheels = [
 
 [[package]]
 name = "cpn-cli"
-version = "0.1.0.dev1"
-source = { git = "https://github.com/check-phat-nguoi/cpn-cli/#6f8d23b3735d4a2652922a72346034e6ce62d746" }
+version = "0.2.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "cpn-core", extra = ["discord", "ocr"] },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/1c/82/956fa08d5c33455b5691c87c16ff71fe2e8a6eb18a7c95e38c12dfa13eae/cpn_cli-0.2.0.tar.gz", hash = "sha256:25db5f00399a39f85361f45d545eaa63f6b797c455f7be061bfc1498a032e822", size = 63570 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/53/51/0524850801dedb601d2dfad7dfa7b6b70f217add5fbf2d6867c2997049db/cpn_cli-0.2.0-py3-none-any.whl", hash = "sha256:bd773b653ae3a2005ef0b5be8ef1eb986da20184303aedd4d0e9034926af2a27", size = 20018 },
 ]
 
 [[package]]
 name = "cpn-core"
-version = "0.1.0.dev2"
-source = { git = "https://github.com/check-phat-nguoi/cpn-core/#f4b13cc2ef6510095495d10418235a71901d4ae4" }
+version = "0.3.0"
+source = { registry = "https://pypi.org/simple" }
 dependencies = [
     { name = "aiohttp", extra = ["speedups"] },
     { name = "beautifulsoup4" },
     { name = "pydantic" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/0c/b9/1a90a49c17c4a0f02c304f373f43de0f9c53a61cfc182d79febcf7c1380e/cpn_core-0.3.0.tar.gz", hash = "sha256:c4d1aadbd9f8db2ca978d35eecff12141b8b037e9e60ad607503a39266a70c35", size = 61898 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/9d/bd/104837c44ca589066637015cce4f9d67345758047e22e0c47018a7a7f811/cpn_core-0.3.0-py3-none-any.whl", hash = "sha256:e9191fa64b81599bce5b5a822c7668f6df5518b66f99ea6078e567317b8c5a34", size = 31594 },
 ]
 
 [package.optional-dependencies]
@@ -317,7 +325,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
-    { name = "cpn-cli", git = "https://github.com/check-phat-nguoi/cpn-cli/" },
+    { name = "cpn-cli", specifier = ">=0.1.0" },
     { name = "json-schema-for-humans", specifier = ">=1.3.4" },
     { name = "mkdocs-exclude", specifier = ">=1.0.2" },
     { name = "mkdocs-material", specifier = ">=9.5.50" },
