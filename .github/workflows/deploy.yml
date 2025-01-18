@@ -54,7 +54,7 @@ jobs:
         run: just build-web
 
       - name: Uninstall cpn cli
-        if: ${{ !steps.setup-python.outputs.cache-hit }}
+        if: ${{ steps.setup-python.outputs.cache-hit == 'false' }}
         run: uv remove cpn-cli
 
       - name: Upload artifact
