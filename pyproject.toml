@@ -1,0 +1,27 @@
+[project]
+name = "cpn-docs"
+version = "0.1.0.dev.1"
+description = "Doc website for check-phat-nguoi"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+  "json-schema-for-humans>=1.3.4",
+  "mkdocs-exclude>=1.0.2",
+  "mkdocs-material>=9.5.50",
+]
+
+[project.scripts]
+generate-schemas = "generate-schemas:__main__.main"
+
+[dependency-groups]
+dev = ["pre-commit>=4.0.1"]
+
+[tool.uv.sources]
+cpn-core = { git = "https://github.com/check-phat-nguoi/cpn-core/" }
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/generate_schemas"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

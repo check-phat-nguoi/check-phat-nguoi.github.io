@@ -1,0 +1,114 @@
+# yaml-language-server: $schema=https://squidfunk.github.io/mkdocs-material/schema.json
+
+site_name: 'Check Phạt Nguội'
+site_author: 'NTGNguyen & Kevin Nitro'
+site_description: 'Tool kiểm tra phạt nguội'
+site_url: 'https://ntgnguyen.github.io/check-phat-nguoi'
+repo_url: 'https://github.com/ntgnguyen/check-phat-nguoi'
+strict: true
+
+nav:
+  - 'Trang chủ': index.md
+  - 'Sử dụng':
+      - usage/index.md
+      - usage/setup-config.md
+      - 'From source':
+          - usage/from-source/index.md
+          - usage/from-source/pip.md
+          - usage/from-source/uv.md
+          - usage/from-source/uv-just.md
+      - 'Nâng cao':
+          - usage/advanced/schedule-run.md
+  - 'Config schema': 'https://ntgnguyen.github.io/check-phat-nguoi/schemas/config.html'
+  - 'Development':
+      - dev/setup.md
+      - 'API':
+          - dev/apis/csgt_vn.md
+          - dev/apis/checkphatnguoi_vn.md
+          - dev/apis/phatnguoi_vn.md
+          - dev/apis/zm_io_vn.md
+  - 'Khác':
+      - other/references.md
+      - other/disclaimer.md
+
+theme:
+  language: vi
+  features:
+    - navigation.instant
+    - navigation.instant.progress
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.path
+    - navigation.indexes
+    - navigation.footer
+    - content.code.copy
+    - content.code.annotate
+    - search.suggest
+    - search.highlight
+  name: material
+  font:
+    text: Merriweather Sans
+  palette:
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: green
+      accent: deep purple
+
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: blue
+      accent: deep orange
+
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: true
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      base_path:
+        - docs/
+        - .
+  - pymdownx.superfences
+  - admonition
+  - pymdownx.details
+  - pymdownx.critic
+  - pymdownx.caret
+  - pymdownx.keys
+  - pymdownx.mark
+  - md_in_html
+  - pymdownx.tabbed:
+      alternate_style: true
+  - attr_list
+  - pymdownx.emoji
+  - toc:
+      permalink: true
+
+plugins:
+  - search:
+      lang: vi
+      pipeline:
+        - stemmer
+        - stopWordFilter
+        - trimmer
+  - exclude:
+      glob:
+        - 'dev/requests/*'
+
+validation:
+  nav:
+    not_found: warn
+    omitted_files: warn
+  unrecognized_links: warn
+
+extra:
+  analytics:
+    provider: google
+    property: G-0GRV2FG8QZ
+  generator: false

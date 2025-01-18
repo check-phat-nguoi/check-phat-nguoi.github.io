@@ -1,0 +1,36 @@
+name: pre-commit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  pre-commit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+          cache-dependency-glob: 'uv.lock'
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version-file: '.python-version'
+          cache: 'pip'
+          cache-dependency-path: 'uv.lock'
+
+      - uses: extractions/setup-just@v2
+
+      - name: Install deps
+        run: just restore-env
+
+      - name: Generate schemas
+        run: just gen-schemas
+
+      - uses: pre-commit/action@v3.0.1
+        with:
+          extra_args: -a --hook-stage manual

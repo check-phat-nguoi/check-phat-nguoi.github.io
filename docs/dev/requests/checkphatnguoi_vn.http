@@ -1,0 +1,8 @@
+# Config
+@plate = 30F88251
+
+### Get for {{plate}}
+POST https://api.checkphatnguoi.vn/phatnguoi
+Content-Type: application/json
+
+{"bienso": "{{plate}}"}

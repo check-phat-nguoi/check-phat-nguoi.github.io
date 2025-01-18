@@ -1,0 +1,66 @@
+{
+  "$schema": "https://ntgnguyen.github.io/check-phat-nguoi/schemas/config.json",
+  "plates_infos": [
+    {
+      "plate": "59XA00000",
+      "type": 2
+    },
+    {
+      "plate": "59XA00001",
+      "type": "motorbike",
+      "owner": "@kevinnitro"
+    },
+    {
+      "plate": "59XA00001",
+      "owner": "@ntgnguyen",
+      "type": "electric_motorbike"
+    },
+    {
+      "plate": "60A64685",
+      "owner": "dad",
+      "type": 1
+    },
+    {
+      "plate": "29A34809",
+      "owner": "Oreo",
+      "apis": "etraffic.gtelict.vn",
+      "type": 1
+    },
+    {
+      "plate": "98A56604",
+      "type": "car",
+      "apis": ["csgt.vn", "checkphatnguoi.vn"]
+    },
+    {
+      "plate": "30F88251",
+      "type": 1,
+      "enable": false
+    }
+  ],
+  "apis": ["phatnguoi.vn", "checkphatnguoi.vn", "phatnguoi.vn", "csgt.vn"],
+  "notifications": [
+    {
+      "telegram": {
+        "bot_token": "2780473231:weiruAShGUUx4oLOMoUhd0GiREXSZcCq-uB",
+        "chat_id": "-1001790012349",
+        "markdown": true
+      }
+    },
+    {
+      "discord": {
+        "bot_token": "MTMzNzg4Ujq0NDI0NDYgNTcyMA.GpITQg.beoF9OxJScbKJwEz5Udy6bzrQJ8zI4BvndbaBA",
+        "chat_id": 832930846182672436,
+        "chat_type": "user"
+      },
+      "enabled": false
+    }
+  ],
+  "pending_fines_only": true,
+  "request_timeout": 20,
+  "asynchronous": true,
+  "detail": true,
+  "detail_log": false,
+  "print_console": true,
+  "show_less_details": false,
+  "log_level": "INFO"
+}

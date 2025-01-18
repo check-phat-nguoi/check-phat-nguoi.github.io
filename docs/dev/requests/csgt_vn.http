@@ -1,0 +1,16 @@
+# Config
+@plate = 30F88251
+@type = 1
+@phpsessid = jmg7m23ttkho70rap0fs6evgb0
+@captcha = rtz4rv
+
+### Get data for {{plate}} with type {{type}}
+POST www.csgt.vn/?mod=contact&task=tracuu_post&ajax
+Cookie: PHPSESSID={{phpsessid}}
+content-type: application/x-www-form-urlencoded
+
+BienKS = {{plate}} &
+Xe= {{type}} &
+captcha = {{captcha}} &
+ipClient = 9.9.9.91 &
+cUrl = 1
