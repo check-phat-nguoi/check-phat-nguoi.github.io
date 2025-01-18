@@ -99,7 +99,8 @@ plugins:
         - trimmer
   - exclude:
       glob:
-        - 'dev/requests/*'
+        - 'dev/requests/**'
+        - 'sample-config/**'
 
 validation:
   nav:
