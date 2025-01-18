@@ -1,0 +1,4 @@
+{
+  "typeCheckingMode": "standard",
+  "include": ["src/**", "../cli/src/**", "../cli/core/**"]
+}
