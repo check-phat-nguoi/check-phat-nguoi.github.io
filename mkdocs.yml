@@ -3,7 +3,7 @@
 site_name: 'Check Phạt Nguội'
 site_author: 'NTGNguyen & Kevin Nitro'
 site_description: 'Tool kiểm tra phạt nguội'
-site_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
+site_url: 'https://check-phat-nguoi.github.io'
 repo_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 strict: true
 
@@ -97,6 +97,12 @@ plugins:
         - stemmer
         - stopWordFilter
         - trimmer
+
+  - git-revision-date-localized:
+      type: date
+      fallback_to_build_date: true
+      enable_creation_date: true
+      enabled: !ENV [CI, false]
 
 validation:
   nav:
