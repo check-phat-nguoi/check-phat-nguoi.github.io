@@ -3,14 +3,10 @@ default: web-dev
 alias w := build-web
 alias s := gen-schemas
 alias r := restore-env
+alias p := precommit-run-all
 
 restore-env:
-  [ -d '.venv' ] || uv sync --all-extras --frozen
-
-bump-version:
-  uv run cz bump --no-verify
-  uv run pre-commit run -a
-  git commit --amend --no-edit
+  [ -d '.venv' ] || uv sync --all-extras
 
 gen-schemas:
   uv run generate-schemas
