@@ -8,7 +8,9 @@ repo_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 strict: true
 
 nav:
-  - 'Trang chủ': index.md
+  - 'Trang chủ':
+      - index.md
+      - support-apis.md
   - 'Sử dụng':
       - usage/index.md
       - 'CLI':
@@ -19,8 +21,8 @@ nav:
           - usage/schedule/cloudflare-workers.md
       - '24/7 bot':
           - usage/247-bot/telegram-railway.md
-  - 'Config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
-  - 'Development':
+  - 'CLI config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
+  - 'Dev':
       - dev/setup.md
       - 'API':
           - dev/apis/csgt_vn.md
@@ -49,7 +51,8 @@ theme:
     - search.highlight
   name: material
   font:
-    text: Merriweather Sans
+    text: Inter
+    code: JetBrains Mono
   palette:
     - scheme: slate
       toggle:
@@ -66,6 +69,7 @@ theme:
       accent: deep orange
 
 markdown_extensions:
+  - footnotes
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: true
@@ -107,7 +111,7 @@ plugins:
 validation:
   nav:
     not_found: warn
-    omitted_files: info
+    omitted_files: warn
   unrecognized_links: warn
 
 extra:

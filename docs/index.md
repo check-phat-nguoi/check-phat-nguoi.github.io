@@ -1,6 +1,6 @@
-# Check Phạt Nguội
+# Trang chủ
 
-Tool kiểm tra phạt nguội cho phương tiện giao thông của bạn từ nhiều API khác nhau, thông báo đến các nền tảng Telegram, Discord...
+Kiểm tra phạt nguội cho phương tiện giao thông của bạn từ nhiều API khác nhau, thông báo đến các nền tảng Telegram, Discord... Cung cấp CLI tool và tự triển khai server bot telegram.
 
 !!! danger
 
