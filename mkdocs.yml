@@ -20,7 +20,7 @@ nav:
           - usage/schedule/github-action.md
           - usage/schedule/cloudflare-workers.md
       - '24/7 bot':
-          - usage/247-bot/telegram-railway.md
+          - usage/247-bot/telegram.md
   - 'CLI config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
   - 'Dev':
       - dev/setup.md
@@ -58,16 +58,14 @@ theme:
     - scheme: slate
       toggle:
         icon: material/weather-sunny
-        name: Dark mode
-      primary: green
-      accent: deep purple
+        name: Chế độ tối
+      primary: indigo
 
     - scheme: default
       toggle:
         icon: material/weather-night
-        name: Light mode
-      primary: blue
-      accent: deep orange
+        name: Chế độ sáng
+      primary: indigo
 
 markdown_extensions:
   - footnotes:
