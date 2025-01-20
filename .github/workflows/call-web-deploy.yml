@@ -1,0 +1,21 @@
+name: Call web deploy
+
+on:
+  workflow_call:
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/create-github-app-token@v1
+        id: app-token
+        with:
+          app-id: ${{ vars.APP_ID }}
+          private-key: ${{ secrets.APP_PRIVATE_KEY }}
+          owner: ${{ github.repository_owner }}
+          repositories: check-phat-nguoi.github.io
+
+      - name: Call web deploy
+        env:
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
+        run: gh workflow run --repo ${{ github.repository_owner }}/check-phat-nguoi.github.io deploy.yml
