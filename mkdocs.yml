@@ -36,19 +36,20 @@ nav:
 theme:
   language: vi
   features:
+    - content.code.annotate
+    - content.code.copy
+    - content.footnote.tooltips
+    - navigation.expand
+    - navigation.footer
+    - navigation.indexes
     - navigation.instant
     - navigation.instant.progress
+    - navigation.path
+    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.sections
-    - navigation.expand
-    - navigation.path
-    - navigation.indexes
-    - navigation.footer
-    - content.code.copy
-    - content.code.annotate
-    - search.suggest
     - search.highlight
+    - search.suggest
   name: material
   font:
     text: Inter
@@ -69,7 +70,7 @@ theme:
       accent: deep orange
 
 markdown_extensions:
-  - footnotes
+  - footnotes:
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: true
@@ -79,14 +80,14 @@ markdown_extensions:
       base_path:
         - docs/
         - .
-  - pymdownx.superfences
   - admonition
-  - pymdownx.details
-  - pymdownx.critic
+  - md_in_html
   - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
   - pymdownx.keys
   - pymdownx.mark
-  - md_in_html
+  - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
   - attr_list

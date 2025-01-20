@@ -9,15 +9,19 @@
 
 ---
 
-## Cài đặt
+## Cài đặt và chạy
 
 === "pip"
 
-    ??? note "Python version >= 3.13"
+    !!! note
+
+        Python version >= 3.13
+
+    ??? note "Tạo môi trường ảo"
+
+        Có thể thiết lập môi trường ảo bằng module venv có sẵn tránh cài đặt vào hệ thống global.
 
         === "module venv sẵn có"
-
-            Có thể thiết lập môi trường ảo bằng module venv có sẵn.
 
             ```sh
             python -m venv .venv
@@ -43,12 +47,24 @@
                 Để tắt môi trường khi không sử dụng chạy `deactivate`
 
 
+    Tải
+
     ```sh
     pip install cpn-cli
     ```
 
-## Chạy
+    Chạy
 
-```sh
-cpn-cli
-```
+    ```sh
+    cpn-cli
+    ```
+
+=== "uv"
+
+    !!! note
+
+        uv tải vào cache và chạy trực tiếp
+
+    ```sh
+    uvx cpn-cli
+    ```
