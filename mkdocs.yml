@@ -4,7 +4,6 @@ site_name: 'Check Phạt Nguội'
 site_author: 'NTGNguyen & Kevin Nitro'
 site_description: 'Tool kiểm tra phạt nguội'
 site_url: 'https://check-phat-nguoi.github.io'
-repo_url: 'https://github.com/check-phat-nguoi/check-phat-nguoi.github.io'
 strict: true
 
 nav:
@@ -118,3 +117,7 @@ extra:
     provider: google
     property: G-0GRV2FG8QZ
   generator: false
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/check-phat-nguoi
+      name: Github
