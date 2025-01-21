@@ -101,7 +101,7 @@ plugins:
         - trimmer
 
   - git-revision-date-localized:
-      type: date
+      type: timeago
       fallback_to_build_date: true
       enable_creation_date: true
       enabled: !ENV [CI, false]
