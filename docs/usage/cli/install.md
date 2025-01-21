@@ -59,6 +59,25 @@
     cpn-cli
     ```
 
+=== "pipx"
+
+    === "Cài vào hệ thống"
+
+        ```sh
+        pipx install cpn-cli
+        cpn-cli
+        ```
+
+    === "Chạy trực tiếp"
+
+        !!! note
+
+            Tải vào cache và chạy trực tiếp
+
+        ```sh
+        pipx run cpn-cli
+        ```
+
 === "uv"
 
     !!! note
