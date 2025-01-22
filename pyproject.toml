@@ -1,6 +1,16 @@
 [project]
 name = "cpn-docs"
 version = "0.0.0"
+authors = [
+  { name = "KevinNitroG", email = "kevinnitro@duck.com" },
+  { name = "NTGNguyen", email = 'ntgnguyen@duck.com' },
+  { name = "WeeCiCi", email = 'wicici310@gmail.com' },
+]
+maintainers = [
+  { name = "KevinNitroG", email = "kevinnitro@duck.com" },
+  { name = "NTGNguyen", email = 'ntgnguyen@duck.com' },
+  { name = "WeeCiCi", email = 'wicici310@gmail.com' },
+]
 description = "Doc website for check-phat-nguoi"
 readme = "README.md"
 requires-python = ">=3.13"
