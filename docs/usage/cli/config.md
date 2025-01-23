@@ -4,8 +4,8 @@ Thiết lập file `config.json` tại nơi đang đứng _(Nơi gọi chạy ch
 { .annotate }
 
 1.  Hoặc
-    - `check-phat-nguoi.config.json` tại nơi đang đứng
-    - `~/check-phat-nguoi.config.json` _(tại home)_
+    - `cpn-cli.config.json` tại nơi đang đứng
+    - `~/cpn-cli.config.json` _(tại home)_
 
 !!! info
 
