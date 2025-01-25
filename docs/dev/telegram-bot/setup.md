@@ -43,7 +43,7 @@
 
 ---
 
-!!! sample "Sample `.env`"
+!!! example "Example `.env`"
 
 ```sh
 OWNERS="1239087604 9012387409"
