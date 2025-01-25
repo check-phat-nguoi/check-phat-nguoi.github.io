@@ -23,6 +23,9 @@ nav:
   - 'CLI config schema': 'https://check-phat-nguoi.github.io/schemas/cli.config.html'
   - 'Dev':
       - dev/setup.md
+      - 'Telegram bot':
+          - dev/telegram-bot/setup.md
+          - dev/telegram-bot/dev.md
       - 'API':
           - dev/apis/csgt_vn.md
           - dev/apis/checkphatnguoi_vn.md
