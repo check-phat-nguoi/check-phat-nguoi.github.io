@@ -1,8 +1,10 @@
 # Config
 @plate = 30F88251
 
-### Get for {{plate}}
+### Get violations
 POST https://api.checkphatnguoi.vn/phatnguoi
 Content-Type: application/json
 
-{"bienso": "{{plate}}"}
+{
+  "bienso": "{{plate}}"
+}

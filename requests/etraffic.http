@@ -1,0 +1,24 @@
+# Config
+@citizenId = 076502001511
+@password = WowCoolPass!
+@plate = 30F88251
+@type = 1
+@user_agent = C08_CD/1.1.8 (com.ots.global.vneTrafic; build:32; iOS 18.2.1) Alamofire/5.10.2
+@refresh_token = "14923rajfd.32492u3roi324.2394uoqursd"
+
+### Login, get refresh token
+POST https://etraffic.gtelict.vn/api/citizen/v2/auth/login
+Content-Type: application/json
+User-Agent: {{user_agent}}
+
+{
+  "citizenIndentify": "{{citizenId}}",
+  "password": "{{password}}"
+}
+
+### Get violations
+GET https://etraffic.gtelict.vn/api/citizen/v2/property/deferred/fines?
+    licensePlate={{plate}}&
+    type={{type}}
+Authorization: Bearer {{refresh_token}}
+User-Agent: {{user_agent}}

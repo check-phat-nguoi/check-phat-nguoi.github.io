@@ -27,10 +27,13 @@ nav:
           - dev/telegram-bot/setup.md
           - dev/telegram-bot/dev.md
       - 'API':
+          - dev/apis/index.md
           - dev/apis/csgt_vn.md
           - dev/apis/checkphatnguoi_vn.md
           - dev/apis/phatnguoi_vn.md
           - dev/apis/zm_io_vn.md
+          - dev/apis/tra_cuu_phat_nguoi.md
+          - dev/apis/etraffic.md
   - 'Khác':
       - other/references.md
       - other/disclaimer.md

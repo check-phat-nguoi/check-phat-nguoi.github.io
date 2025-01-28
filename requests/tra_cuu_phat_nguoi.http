@@ -1,0 +1,15 @@
+# Config
+@plate = 30F88251
+@type = 1
+@csrf = 2206da70c2601dc09a7522cff06e4a70411861be3635eee6e252dbbfc10f2124
+@phpsessid = rii8rr9l0m6e1s40k5elg5defg
+
+### Get cookies and csrf token
+GET https://tracuuphatnguoi.net
+
+### Get violations
+POST https://tracuuphatnguoi.net/tracuu1.php?
+     BienKS={{plate}}
+     &Xe={{type}}
+     &token={{csrf}}
+Cookie: PHPSESSID={{phpsessid}}

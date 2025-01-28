@@ -4,8 +4,14 @@
 @phpsessid = jmg7m23ttkho70rap0fs6evgb0
 @captcha = rtz4rv
 
-### Get data for {{plate}} with type {{type}}
-POST www.csgt.vn/?mod=contact&task=tracuu_post&ajax
+### Get captcha image, also cookie too
+GET https://www.csgt.vn/lib/captcha/captcha.class.php
+
+### Request violations
+POST www.csgt.vn/
+     ?mod=contact&
+     task=tracuu_post
+     &ajax
 Cookie: PHPSESSID={{phpsessid}}
 content-type: application/x-www-form-urlencoded
 
@@ -14,3 +20,8 @@ Xe= {{type}} &
 captcha = {{captcha}} &
 ipClient = 9.9.9.91 &
 cUrl = 1
+
+### Get violations
+POST https://www.csgt.vn/tra-cuu-phuong-tien-vi-pham.html?
+     &LoaiXe={{vehicle_type}}&
+     BienKiemSoat={{plate}}
