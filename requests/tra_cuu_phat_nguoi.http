@@ -13,3 +13,4 @@ POST https://tracuuphatnguoi.net/tracuu1.php?
      &Xe={{type}}
      &token={{csrf}}
 Cookie: PHPSESSID={{phpsessid}}
+Referer: https://tracuuphatnguoi.net/
